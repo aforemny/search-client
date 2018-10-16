@@ -1143,7 +1143,7 @@ function setupIntelliSearch(searchSettings, uiSettings) {
                     // Toggle the client-category-configuration for the category-node
                     toggleClientCategoryConfiguration(category);
                 } else {
-                    let result = client.toggleCategoryExpansion(category);
+                    let result = client.toggleCategoryExpansion(category.categoryName);
                     // console.log(
                     //     `Toggled expansion for category '${
                     //         category.displayName
@@ -1211,7 +1211,7 @@ function setupIntelliSearch(searchSettings, uiSettings) {
                         // Toggle the client-category-configuration for the group-node
                         toggleClientCategoryConfiguration(group);
                     } else {
-                        let result = client.toggleCategoryExpansion(group);
+                        let result = client.toggleCategoryExpansion([group.name]);
                         // console.log(
                         //     `Toggled expansion for group '${
                         //         group.displayName
