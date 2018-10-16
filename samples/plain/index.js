@@ -1002,7 +1002,9 @@ function setupIntelliSearch(searchSettings, uiSettings) {
                     li.addEventListener(
                         "click",
                         () => {
+                            client.deferUpdates(true);
                             client.matchPage = pageNum;
+                            client.deferUpdates(false);
                         },
                         false
                     );
